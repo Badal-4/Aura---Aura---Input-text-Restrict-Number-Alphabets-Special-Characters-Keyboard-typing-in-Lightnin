@@ -1,0 +1,34 @@
+<aura:application extends="force:slds">
+    <aura:attribute name="myText" type="string" />
+    <aura:attribute name="myNumber" type="string" />
+    <aura:attribute name="myDate" type="string" />
+    <aura:attribute name="myNumSpl" type="string" />
+    <div style="width:400px;height:60px;">
+        <p style="font-size:16px;">Restrict Numbers, Alphabets and Special Characters</p>
+        <span onkeypress="{!c.TextCheck}">
+            <lightning:input label="Account Name"
+                             name="Body"
+                             placeholder="Enter Text..."
+                             value="{!v.myText}"/>
+        </span>
+        <span onkeypress="{!c.NumberCheck}">
+            <lightning:input label="Account Number"
+                             name="Body1"
+                             placeholder="Enter Number..."
+                             value="{!v.myNumber}"/>
+        </span>
+        <span onkeypress="{!c.DateCheck}">
+            <lightning:input label="Date"
+                             name="Body2"
+                             placeholder="Enter Date..."
+                             value="{!v.myDate}"
+                             type="date"/>
+        </span>
+        <span onkeypress="{!c.NumSplCharsCheck}">
+            <lightning:input label="Numbers and Special Characters"
+                             name="Body3"
+                             placeholder="Enter Numbers and Special Characters..."
+                             value="{!v.myNumSpl}"/>
+        </span>
+    </div>
+</aura:application>
